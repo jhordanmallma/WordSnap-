@@ -1,0 +1,809 @@
+/* Reset de estilos para asegurar uniformidad */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ffffff; /* Fondo general blanco */
+}
+
+
+
+
+.features-section {
+    background:  #e0f2ff; ; /* Fondo celeste */
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px; /* Bordes redondeados */
+    max-width: 95%;
+    margin: 0 auto;
+    /*min-height: 1200px;*/
+    text-align: center;
+}
+
+.features-section h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    color: #122859;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.features-section p {
+    font-family: "poppins", sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+
+.features-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas para la primera fila */
+    grid-template-rows: auto auto; /* Dos filas */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: auto auto; /* Dos filas */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-areas: 
+        "video-call chat" /* Ahora el video va a la izquierda y el chat a la derecha */
+        "stories stories"; /* La historia ocupa toda la segunda fila */
+}
+
+
+
+
+.feature-card:nth-child(3) {
+    grid-column: span 2;
+}
+.feature-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    
+}
+.feature-card h2{
+    font-family: 'Merriweather', serif;
+    font-weight: 400; 
+    color: #122859;
+    text-align: left;
+    margin-top: 13px; /* Espacio superior */
+    padding: 11px; 
+
+}
+.feature-card p{
+    text-align: left;
+    padding:10px; 
+}
+.feature-card.video-call h2 {
+    color: #333; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 4px;
+
+  }
+.video-call video {
+    width: 96%;
+    border-radius: 20px;
+    height: 200px;
+    max-height: 250px;
+    object-fit: cover; /* También puedes probar con 'contain' según lo que necesites */
+
+}
+
+.small-videos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+   
+}
+
+
+.small-videos video {
+    width: 30%;
+    border-radius: 18px;
+    height: 80px;
+    object-fit: cover;
+    max-height: 60px;
+
+}
+
+.chat-box .chat-messages {
+    height: 300px;      /* Altura fija para habilitar el scroll */
+    overflow-y: auto;   /* Permite hacer scroll vertical */
+}
+
+.chat-box .hidden-messages {
+    display: none;
+}
+
+.stories .story-slider {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+.stories .story-slider img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* configuracion para la seccion de tarjeta de video dos titulo boton y parrafo */ 
+
+.feature-content {
+    text-align: left;
+    margin-top: 20px;
+    gap: 18px;
+}
+
+.feature-badge {
+    display: inline-block;
+    background-color: white;  /* Fondo blanco */
+    color:  #59698B ;           /* Texto azul */
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid  #59698B ; /* Borde azul */
+    border-radius: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 8px; 
+    font-family: "golos-text", sans-serif;
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    
+}
+.feature-badge:hover {
+  background-color: #59698B;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.feature-content h3 {
+    
+    font-size: 22px;
+    font-weight: 400;
+    color: #122859;
+    margin: 10px 0;
+    padding: 8px;
+    font-family: 'Merriweather', serif;
+
+}
+
+.feature-content p {
+   
+    font-size: 16px;
+    color: #555;
+    padding: 8px;
+}
+
+
+
+/* Fondo celeste degradado con bordes redondeados */
+
+.video-call-gradient {
+    background: linear-gradient(to bottom, #cfe8fb, #e0f2ff);
+    /* Solo redondeamos las esquinas inferiores (bottom-left y bottom-right) */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 60px;
+    margin-bottom: 30px;
+
+    margin-top: -20px; 
+    height: 448px;
+    
+}
+
+/* Fondo blanco para los videos */
+.video-call-content {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 7px;
+    height: 362px;
+   
+}
+
+
+/* Fondo gradiente para la primera tarjeta de chat */
+
+.chat-gradient {
+    background: linear-gradient(to bottom, #cfe8fb, #e0f2ff);
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 20px;
+    
+    margin-bottom: -20px; 
+    height: 450px;
+}
+
+
+
+/*Estilos para los chats en general, para el contenido dentro del fondo grediente de la tarjeta uno */
+
+.chat-header {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;  /* Centra verticalmente el icono y el texto */
+  gap: 10px;            /* Espacio horizontal entre icono, texto y botón */
+  margin-bottom: 20px;
+  
+}
+
+.chat-header-icon img {
+    width: 35px; 
+    height: 35px;
+}
+
+/* El texto se expande, empujando el botón a la derecha */
+.chat-header-text {
+    flex: 1;
+    font-weight: 610;
+    color: #555;
+    text-align: left;
+   
+
+}
+.chat-author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre icono, nombre y hora */
+  }
+/* Icono circular del autor */
+.chat-author-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+  }  
+
+.chat-message-header {
+    display: flex;
+    justify-content: space-between; /* El autor a la izquierda, el botón de opciones a la derecha */
+    align-items: center;
+    margin-bottom: 5px; /* Espacio debajo del encabezado */
+    position: relative;
+  }
+
+  /* Botón  */
+  .chat-header-btn {
+    background-color: #181818;  /* Color de fondo negro */
+    border: none;  /* Sin borde */
+    border-radius: 25px;  /* Bordes más redondeados */
+    font-size: 14px;  /* Tamaño de fuente más grande */
+    padding: 8px 16px;  /* Más relleno para mayor tamaño */
+    font-weight: 500;  /* Menos negrita para que no sea tan grueso */
+    color: #ffffff;  /* Texto en color blanco */
+    text-transform: none;  /* No usar mayúsculas forzadas */
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+    
+  
+}
+
+.chat-header-btn:hover {
+  background-color: #2a2a2a;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+
+  /* Mensajes */
+.chat-message {
+    margin-bottom: 20px; /* Espacio entre mensajes */
+    
+}
+/* Hora del mensaje */
+.chat-time {
+    color: #999;
+    font-size: 0.85rem;
+  }
+
+/* El nombre del remitente */
+.chat-author {
+    display: block;       /* Ocupa toda la línea */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+  }
+
+  /* El texto del mensaje, con fondo blanco redondeado */
+/* Cuerpo del mensaje: globo con fondo blanco y esquinas redondeadas */
+.chat-message p {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin: 0;
+    font-family: "poppins", sans-serif;
+    position: relative;
+    width: 400px;
+    margin-left: 9%; /* Ajusta el valor según lo necesites */
+
+    
+  }
+
+  /* Botón de opciones (3 puntos) */
+.chat-options-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+
+
+
+  }
+  .chat-options-btn .dots {
+    font-size: 1.5rem;
+    color: #999;
+  }
+
+
+  /* Menú desplegable oculto por defecto */
+.chat-options-menu {
+    display: none;              /* Oculto inicialmente */
+    position: absolute;
+    top: 100%;                  /* Debajo del botón */
+    right: 0;                   /* Alineado a la derecha */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;                /* Para que quede sobre otros elementos */
+  }
+  
+  .chat-options-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .chat-options-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .chat-options-menu li:hover {
+    background-color: #f5f5f5;  /* Efecto hover */
+  }
+  
+  /* Clase para mostrar el menú */
+  .chat-options-menu.active {
+    display: block; /* Se muestra cuando está activa */
+  }
+  
+  .chat-messages {
+    /* Ocultar scrollbar en Firefox */
+    scrollbar-width: none;
+    /* Ocultar scrollbar en Internet Explorer 10+ */
+    -ms-overflow-style: none;
+}
+
+
+/*Estilos para la ultima tarjeta */
+
+.feature-card.stories {
+    text-align: left;
+}
+
+.feature-card.stories .feature-badge {
+    
+    margin-left: 10px; /* Ajusta el valor según el desplazamiento que quieras */
+
+   
+}
+
+
+.feature-card.stories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor Izquierdo: Alineación a la izquierda */
+.feature-card.stories .story-content {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+}
+
+/* Contenedor Derecho: Fondo degradado y estilo */
+.feature-card.stories .story-slider-container {
+    flex: 1;
+    background: linear-gradient(to bottom, #cfe8fb, #e0f2ff);
+    padding: 20px;
+    border-radius: 15px 15px 0 0; /* Redondeado arriba, recto abajo */
+    height: 500px;
+    margin-bottom: -20px; 
+    
+}
+
+
+
+/* Contenedor superior (avatar, nombre, hora) */
+.story-topbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.story-topbar p {
+    margin-bottom: -10px;
+}
+
+/* Avatar redondo */
+.story-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;   /* Asegura que la imagen se ajuste sin deformarse */
+    margin-right: 10px; 
+    margin-bottom: -10px;
+}
+
+/* Nombre del usuario */
+
+
+.story-username {
+    margin: 0 0 2px; /* El primer valor es margen sup, el segundo margen inf */
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+  }
+
+/* Hora debajo del nombre */
+
+
+.story-time {
+    margin: 0;       /* Sin margen extra arriba/abajo */
+    line-height: 1.2; 
+    font-size: 0.85rem;
+    color: #666;
+    
+  }
+
+/* Separador opcional */
+.story-divider {
+    border: none;            /* Quitamos el borde por defecto */
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+
+.story-item {
+    background-color: #fff;          /* Fondo blanco */
+    border: 2px solid #fff;          /* Borde blanco (opcional si quieres enfatizar el borde) */
+    border-radius: 15px 15px 0 0;    /* Solo esquinas superiores redondeadas */
+    padding: 10px;                   /* Espacio interno entre el borde y la imagen */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    margin: 0 auto 20px;             /* Centrado horizontal y espacio inferior */
+    display: inline-block; 
+    scroll-snap-align: start;        /* Cada historia se "ajusta" al inicio del contenedor */
+    flex: 0 0 100%;                  /* Ancho completo del contenedor */
+    box-sizing: border-box; 
+    height: 368px;                    /* Altura de cada tarjeta */
+}
+
+
+
+.story-item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0; /* Solo redondeado en la parte superior */
+    display: block;
+    object-fit: cover;
+    height: 355px;  
+}
+
+
+/* Aseguramos que el contenedor tenga posición relativa */
+.story-slider-container {
+    position: relative;
+  }
+
+/* Estilo para los botones de flechas */
+.story-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);  /* Fondo semitransparente */
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    opacity: 0;  /* Ocultos por defecto */
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+  .story-arrow.left {
+    left: 10px;
+  }
+  
+  .story-arrow.right {
+    right: 10px;
+  }
+/* Mostrar las flechas cuando el usuario interactúe (por ejemplo, al pasar el mouse sobre el contenedor) */
+.story-slider-container:hover .story-arrow {
+    opacity: 1;
+  }
+    
+/* Indicadores (3 rayas) */
+.story-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;         /* Espacio entre rayas */
+    margin-bottom: 20px;
+    margin-top: 28px;
+}
+.story-indicators .indicator {
+    flex: 1;          /* Cada raya ocupa el mismo espacio horizontal */
+    height: 5px;
+    background-color: #ccc;      /* Color por defecto */
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+/* Color distinto para el indicador activo */
+.story-indicators .indicator.active {
+    background-color: #333;      /* Tonalidad más oscura */
+}
+
+/*estilos para el icono de la parte de arriba de todo el html */ 
+.icon-container {
+    text-align: center;       /* Centra horizontalmente el contenido */
+    margin-bottom: 23px;      /* Espacio entre el ícono y el título */
+}
+
+.feature-icon {
+    width: 40px;              /* Ajusta el tamaño del ícono */
+    height: 40px;
+    
+}
+html, body {
+  overflow: hidden; 
+ 
+}
+
+
+
+/*RESPONSIVIDAD PARA LAS PAGINAS */
+@media (max-width: 768px) {
+    .features-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        "video-call"
+        "chat"
+        "stories";
+    }
+    /* Evitamos que la tercera tarjeta extienda dos columnas */
+    .feature-card:nth-child(3) {
+      grid-column: auto;
+    }
+  }
+  @media (max-width: 768px) {
+    .features-section {
+      padding: 20px;
+      /* Se elimina el min-height para adaptarse al contenido */
+      min-height: auto;
+    }
+    
+    .feature-card {
+      padding: 15px;
+    }
+    
+    /* Ajustar el contenedor del chat si fuera necesario */
+    .chat-box .chat-messages {
+      height: 250px; /* Reducir la altura en móviles */
+    }
+    
+    /* Reducir altura y padding en el degradado de video */
+    .video-call-gradient {
+      padding: 20px;
+      height: auto;
+      margin-top: 0;
+    }
+    
+    .video-call-content {
+      height: auto;
+    }
+    
+    /* Ajustar la sección de historias */
+    .story-slider-container {
+      height: auto;
+      padding: 15px;
+    }
+    
+    .story-item {
+      height: auto;
+    }
+    
+    .story-indicators {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  
+@media (max-width: 480px) {
+  /* Ajustes generales de la sección */
+  .features-section {
+    padding: 20px;
+    border-radius: 15px;
+    min-height: auto;
+  }
+  
+  .features-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .features-section p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de tarjetas: apilar en columna */
+  .features-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
+   
+  }
+
+  /* Tarjetas */
+  .feature-card {
+    padding: 15px;
+    height: 577px;
+  }
+
+  
+  .feature-card h2 {
+    font-size: 1.4rem;
+    padding: 8px;
+  }
+  
+  .feature-card p {
+    padding: 8px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Video principal */
+  .video-call video {
+    width: 100%;
+    max-height: 200px;
+  }
+  
+  .small-videos video {
+    width: 30%;
+    max-height: 50px;
+  }
+  
+  /* Chat: reducir la altura del contenedor y ajustar los mensajes */
+  .chat-box .chat-messages {
+    height: 200px;
+  }
+  
+  .chat-message p {
+    width: 90%;
+    max-width: 100%;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    margin: 0 auto;
+  }
+  .chat-gradient {
+    height: 340px;
+  }
+  
+  .chat-header, 
+  .chat-message-header {
+    padding: 5px 10px;
+  }
+  
+  .chat-author-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  /* Video call gradient y contenido */
+  .video-call-gradient {
+    padding: 15px;
+    height: auto;
+    
+    margin-top: -16px; 
+  }
+  
+  .video-call-content {
+    padding: 5px;
+    height: auto;
+  }
+  
+  /* Historias: ajustar contenedor y elementos */
+  .story-slider-container {
+    padding: 10px;
+    height: auto;
+  }
+  
+  .story-item {
+    height: auto;
+    padding: 5px;
+  }
+  
+  .story-topbar p,
+  .story-username,
+  .story-time {
+    font-size: 0.85rem;
+  }
+  
+  .story-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .story-indicators {
+    margin: 5px 0;
+  }
+  
+  .story-arrow {
+    padding: 5px 8px;
+    font-size: 1rem;
+  }
+  
+  /* Icon superior */
+  .icon-container {
+    margin-bottom: 10px;
+  }
+  
+  .feature-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
