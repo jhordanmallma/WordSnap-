@@ -492,6 +492,11 @@ a:focus, button:focus, input:focus, textarea:focus {
     padding: 80px 20px;
     
 }
+.community-dashboard .stats {
+    display: flex;
+    gap: 125px; /* Aumenta la separación entre los elementos */
+}
+
 .community-dashboard h2 {
     margin-bottom: 43px;
     font-family: 'Merriweather', serif;
