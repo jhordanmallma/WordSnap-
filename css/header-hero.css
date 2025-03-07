@@ -1,0 +1,557 @@
+/* ---- General ---- */
+
+
+body {
+    
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #ffffff ;
+}
+
+
+/* ---- Hero Container (Header + Hero) ---- */
+.hero-container {
+    padding-top: 20px;
+   
+    padding: 40px 30px;
+    background: linear-gradient(
+      to bottom,
+      #91B8E6 0%,   /* Empieza celeste */
+      #E3EEFF 30%,  /* Celeste claro hasta el 30% */
+      #FFFFFF 70%   /* De 70% a 100% ya es blanco */
+    );
+    /*background: linear-gradient(to bottom, #D6E6FF 0%, #E3EEFF 35%, #F5F9FF 70%, #FFFFFF 100%);*/
+    text-align: center;
+    border-radius: 90px;
+    position: relative;
+    overflow: hidden;
+    max-width: 1100px; 
+    margin: 0 auto;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%);
+
+  
+    
+    
+}
+
+/* ---- Barra de Navegación ---- */
+
+.navbar {
+    display: flex;
+    justify-content: center;  /* Centra la barra */
+    align-items: center;
+    background: rgba(218,230,254,255);
+    border-radius: 50px;
+    padding: 8px 25px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08); /* Más suave y difuminado */
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    backdrop-filter: blur(10px); /* Agrega efecto de desenfoque */
+    margin-top: 0px;
+    
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1000;
+
+}
+
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+
+    
+
+
+}
+/* ---- Logo ---- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Animación suave */
+
+}
+.logo-container:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del contenedor y sus elementos */
+}
+
+.logo {
+    height: 30px;
+    margin-right: 1px;
+}
+
+.logo-container img {
+    height: 30px;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "epilogue", sans-serif;
+    
+}
+
+
+/* ---- Menú de Navegación ---- */
+
+/* --- Menú de navegación: reinicio y estilos desde cero --- */
+
+/* --- Menú de navegación: reinicio y estilos desde cero --- */
+
+/* Contenedor del menú */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* Cada ítem del menú */
+  .menu li {
+    position: relative;
+    border-bottom: 1px solid #eee;
+  }
+  
+  
+  /* Estilo base de los enlaces */
+  .menu li a {
+    text-decoration: none;
+    color: #373737;
+    font-size: 17px;
+    font-family: 'Figtree', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  /* Efecto hover: cambia el color del texto */
+  .menu li a:hover {
+    color: #007bff;
+  }
+  
+  /* Para los enlaces que disparan submenú, usamos la clase .submenu-toggle */
+  .submenu-toggle {
+    position: relative;
+    padding-right: 20px; /* Espacio para la flecha */
+  }
+  
+  /* Flecha: se agrega con un pseudo-elemento */
+  .submenu-toggle::after {
+    content: "\f078"; /* Código de flecha de Font Awesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: inherit;  /* Hereda el color del enlace */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Cuando el submenú se activa, se añade la clase .active y la flecha rota */
+  .submenu-toggle.active::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  /* --- Menú desplegable --- */
+  
+  /* Estado inicial: oculto, con opacidad 0 y desplazado hacia arriba */
+  .submenu {
+    position: absolute;
+    
+    top: 135%; /* o calc(100% + 5px) */
+    left: -85%;
+    transform: translateX(-50%) translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    min-width: 220px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+.submenu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Permite interacción cuando está visible */
+}
+  
+  /* Estado abierto: visible, sin desplazamiento y con pointer-events activado */
+  
+
+.submenu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  
+  /* Estilos para los enlaces del submenú */
+ 
+  /* Enlaces dentro del submenú */
+.submenu li a {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #373737;
+    transition: background 0.2s ease;
+  }
+  
+  /* Hover en el submenú: cambio de fondo */
+ 
+  /* Al pasar el cursor, se oscurece todo el bloque */
+.submenu li a:hover {
+    background: #f0f0f0;
+  }
+
+
+  
+/* ---- Botones del Header ---- */
+
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.navbar img {
+    height: 30px;
+}
+.btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background: #2563eb; /* Azul vibrante */
+    color: white;
+    border: none;
+    transition: transform 0.3s ease; /* Suaviza la transición */
+
+}
+
+
+.btn-primary:hover {
+    background: #1d4ed8; /* Azul más oscuro al pasar el cursor */
+    transform: scale(1.12); /* Aumenta el tamaño al 105% */
+
+}
+
+.btn-alt {
+    background:  linear-gradient(75deg, rgba(245,248,245,1) 0%, rgba(253,255,255,1) 98%);
+    color: #1e293b;
+    border: 1px solid #d1d5db;
+    transition: transform 0.3s ease; /* Suaviza la transición */
+
+}
+
+.btn-alt:hover {
+    background: #f3f4f6;
+    transform: scale(1.12); /* Aumenta el tamaño al 105% */
+
+}
+.btn-light {
+    background:  linear-gradient(75deg, rgba(245,248,245,1) 0%, rgba(253,255,255,1) 98%);
+    border: 1px solid #ccc;
+    color: black;
+    font-family: "figtree", sans-serif;
+    font-weight: 370;
+     
+}
+
+.btn-dark {
+    background: black;
+    color: white;
+    font-family: "figtree", sans-serif;
+    font-weight: 370;
+     
+}
+.btn-underline {
+    position: relative;       /* Para poder usar position absolute en el pseudo-elemento */
+    display: inline-block;    /* Asegura que el pseudo-elemento se ajuste al ancho del botón */
+    text-decoration: none;
+    
+
+  }
+  
+  /* Pseudo-elemento que se usará como la "línea" */
+  .btn-underline::after {
+    content: "";
+    position: absolute;
+    left: 50%;              /* Punto de referencia horizontal: mitad del elemento */
+    bottom: 0;             /* Se coloca al final del botón */
+    width: 65%;            /* Ajusta el porcentaje para hacer la línea más o menos larga */
+    height: 2px;           /* Grosor de la línea */
+    background: currentColor; /* Usa el color del texto del botón */
+    transform: translateX(-50%) scaleX(0); 
+    /* translateX(-50%) lo centra en la posición "left: 50%" 
+       scaleX(0) significa que inicialmente la línea está “colapsada” en el eje X */
+    transform-origin: center;  /* La expansión partirá del centro */
+    transition: transform 0.3s ease; /* Duración y suavidad de la animación */
+  }
+  
+  /* Al hacer hover, la línea se despliega (scaleX(1)) desde el centro */
+  .btn-underline:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+
+/* ---- Contenido del Hero ---- */
+.hero-content {
+    padding-top: 30px;
+}
+
+
+
+/* ---- Etiqueta flotante "The power of communication" ---- */
+
+.hero-content .highlight-text {
+    font-size: 15px;
+    color: #1F417F;
+    display: inline-block;
+    background: #f9feff;
+    padding: 7px 14px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1d5db;
+    font-weight: 550;
+    
+    /* Transición suave para que el efecto sea fluido */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✨ Efecto al pasar el cursor */
+.hero-content .highlight-text:hover {
+    
+    box-shadow: 0px 0px 15px rgba(31, 65, 127, 0.6); /* Sombra azul alrededor */
+
+}
+
+/* ---- Título del Hero ---- */
+
+.hero-content h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 70px;
+    font-weight: 550; /* Más grueso y visible */
+    margin-bottom: 15px;
+    color: #122859;
+    line-height: 1.2; /* Espaciado ajustado */
+    margin-top: 10px; 
+}
+
+/* ---- Párrafo del Hero ---- */
+
+
+.hero-content p {
+    font-family: "figtree", sans-serif;
+ /* Mantiene coherencia con el título */
+    font-size: 18px;
+    font-weight: 600; /* Un poco más delgado para diferenciarlo */
+    color: #3c4d54;
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-style: normal;
+    margin-top: 20px;
+}
+
+/* ---- Botones del Hero ---- */
+.hero-content .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-content .btn {
+    padding: 12px 20px;
+}
+
+/* ---- Imagen de Vista Previa ---- */
+.hero-content figure {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.hero-content figure img {
+    width: 100%;
+    max-width: 960px;
+    border-radius: 40px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+    border: 8px solid  #e4eef0; /* Color más sutil */
+    
+
+}
+
+figure img:hover {
+    animation: float 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+html, body {
+   overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.icon-rocket {
+    width: 25px; /* Ajusta según el tamaño deseado */
+    height: auto;
+    vertical-align: middle; /* Alinea con el texto */
+    
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+    .navbar {
+        width: 90%;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        width: 95%;
+        margin: 0 auto;
+        padding: 2px 10px; 
+    }
+    
+    .navbar-container {
+        flex-direction: column;
+        gap: 10px; /* Espacio entre logo, menú y botones */
+        align-items: center; /* Centra todo en la columna */
+    }
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+        align-items: center; 
+    }
+
+    .nav-buttons {
+        margin-top: 10px;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-content .buttons {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+
+/* Nuevo breakpoint para dispositivos muy pequeños (max-width: 480px) */
+
+@media (max-width: 480px) {
+    .hero-container {
+      
+        padding: 20px 15px;
+        border-radius: 50px;
+        position: relative;
+       
+
+    }
+    
+    
+    .navbar {
+        padding: 2px 10px;
+    }
+    .menu {
+        gap: 10px;
+    }
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    .hero-content p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+    .hero-content figure img {
+        max-width: 100%;
+        border-radius: 20px;
+        border-width: 4px;
+        
+    }
+}
+
+/* 1) Estilo base del botón hamburguesa */
+.hamburger {
+    display: none;        /* Oculto por defecto (solo se mostrará en mobile) */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;  /* Puedes ajustar el color */
+    transition: all 0.3s;
+  }
+  
+  /* 2) A partir de cierto ancho (ej. 768px) mostramos el botón y ocultamos el menú en modo “collapsed” */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block; /* El botón hamburguesa aparece en pantallas pequeñas */
+    }
+  
+    /* Ocultamos el menú y los botones cuando no esté activo */
+    .menu,
+    .nav-buttons {
+      display: none;
+      flex-direction: column; /* Para que se apilen verticalmente al mostrarse */
+      gap: 10px;
+      text-align: center;     /* Centrar los enlaces al mostrarse */
+    }
+  
+    /* Cuando estén activos, se muestran como bloque/flex */
+    .menu.active,
+    .nav-buttons.active {
+      display: flex;
+    }
+   
+  }
+  
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,310 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+}
+.comunicacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    background:  linear-gradient(to bottom, #D0E0FA, #EDF9F9);;
+    padding: 40px;
+    border-radius: 27px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    
+}
+
+.texto {
+    max-width: 500px;
+}
+.texto h1 {
+    font-size: 43px;
+    font-weight: 550; 
+    color:#122859;;
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    margin-left: 27px; /* Mueve el h1 20px a la derecha */
+    
+}
+.texto p {
+    font-size: 16px;
+    color: #5A7184;
+    margin-bottom: 20px;
+    margin-left: 27px; 
+}
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-left: 27px; 
+}
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilo para los dos botones get stared y leartn more */
+.btn-light {
+  background: white;
+  border: 2px solid #D0E4FF; /* Borde celeste claro */
+  color: #1C3D5A; /* Color de texto */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+/* Efecto hover para que el botón crezca un poco */
+.btn-light:hover {
+  background: #F8FBFF; /* Ligero cambio en el fondo */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  transform: scale(1.07); /* Hace que el botón crezca un 7% */
+}
+
+/* Efecto al presionar el botón */
+.btn-light:active {
+  background: #EAF3FF; /* Un poco más oscuro al hacer clic */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(0.98); /* Se encoge al presionar */
+}
+.btn-primary {
+  background: linear-gradient(to bottom, #4A8DFF, #166CFF); /* Degradado azul */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 10px; /* Bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Línea blanca sutil en los contornos */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para efecto de relieve */
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+}
+/* Efecto hover para resaltar el botón */
+.btn-primary:hover {
+  background: linear-gradient(to bottom, #5A9DFF, #2B78FF);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transform: scale(1.07); /* Hace que el botón crezca un 7% */
+}
+
+/* Efecto al presionar el botón */
+.btn-primary:active {
+  background: linear-gradient(to bottom, #3B7CFF, #0F5EFF);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+.mensajes-container {
+    width: 100%;
+    overflow-x: auto;  /* Scroll horizontal */
+    margin: 0 auto;
+    /* Opcional: estilo de scroll suave */
+    scroll-behavior: smooth; 
+    /* Si usas el drag con mouse, conserva overflow-x: auto */
+    /* height fija si quieres controlar la altura */
+    height: 350px; 
+    border: 1px solid #ddd; /* Solo para ver el contenedor */
+    border-radius: 12px;
+    position: relative;
+  }
+.mensajes-scroll {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    
+}
+.mensaje {
+    background : white;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.mensaje img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.contenido h4 {
+    font-size: 14px;
+    margin: 0;
+    color: #1C3D5A;
+}
+.contenido p {
+    font-size: 12px;
+    margin: 0;
+    color: #5A7184;
+}
+
+
+
+
+
+/*estilos para el wra´per */ 
+
+.mensajes-wrapper {
+    position: relative;
+    width: 1500px; /* o más, según cuántos mensajes y cuán dispersos */
+    height: 100%;  /* que coincida con la altura del contenedor */
+  }
+
+
+.mensaje-card {
+    position: absolute; /* Para ubicarlo con left / top */
+    width: 200px;       /* Ajusta el ancho de cada tarjeta */
+    background-color: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease; /* Animación suave */
+    
+
+  }
+  
+  .mensaje-card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+
+  }
+  .mensaje-card img.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .mensaje-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Nombre a la izquierda, hora a la derecha */
+    margin-bottom: 8px;
+  }
+  
+  .mensaje-header .nombre {
+    font-weight: 600;
+    font-size: 20px;
+    color: #1C3D5A;
+  }
+  
+  .mensaje-header .hora {
+    font-size: 12px;
+    color: #777;
+  }
+  .mensaje-texto {
+    font-size: 13px;
+    color: #5A7184;
+    line-height: 1.4;
+    margin-top: 4px;
+  }
+  
+  .icono-check {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+  }
+
+  .mensajes-container {
+    transform: translateX(40px) translateY(7px);
+}
+
+  
+
+
+
+
+/* MEDIA QUERIES PARA RESPONSIVIDAD */
+
+/* Para dispositivos medianos (ancho menor a 1024px) */
+@media (max-width: 1024px) {
+  .comunicacion {
+    flex-direction: column;
+    padding: 30px;
+    height: auto;
+  }
+  .texto {
+    text-align: center;
+    margin: 0 0 20px 0;
+    max-width: 100%;
+  }
+  .texto h1 {
+    font-size: 32px;
+    margin-left: 0;
+  }
+  .texto p {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .botones {
+    justify-content: center;
+    margin-left: 0;
+  }
+  .mensajes-container {
+    transform: none;
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* Para dispositivos pequeños (ancho menor a 768px) */
+@media (max-width: 768px) {
+  .comunicacion {
+    flex-direction: column;
+    padding: 20px;
+    height: 510px;
+    margin-top:20px;
+  }
+  .mensajes-container {
+    transform: none;
+    width: 100%;
+    height: auto;
+   
+  }
+  /* Forzamos que el wrapper disponga los mensajes en forma de lista/flex en lugar de posicionarlos absolutamente */
+  .mensajes-wrapper {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100% !important;
+    height: auto !important;
+  }
+  /* Se modifican las tarjetas para que se muestren en bloque y centradas */
+  .mensaje-card {
+    position: relative !important;
+    width: 80% !important;
+    margin: 10px auto !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: auto !important;
+  }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}

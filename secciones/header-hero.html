@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header & Hero</title>
+    <link rel="stylesheet" href="../css/header-hero.css"> <!-- Solo sus propios estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/duu4zul.css">
+
+
+</head>
+<body>
+    <div style="height: 30px;"></div>
+
+    <!-- Sección Principal -->
+<section id="mi-seccion" class="hero-container ">
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <img src="../assets/logo.png" alt="WordSnap Logo" class="logo">
+                <span class="logo-text">WordSnap</span>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            <ul class="menu">
+                <!-- Features con submenú -->
+                <li class="has-submenu">
+                    <a href="#" class="submenu-toggle">Features</a>
+                    <ul class="submenu">
+                        <li><a href="#">Communication</a></li>
+                        <li><a href="#">Collaboration</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </li>
+            
+                <!-- Download con submenú -->
+                <li class="has-submenu">
+                    <a href="#" class="submenu-toggle">Download</a>
+                    <ul class="submenu">
+                        <li><a href="#">Download for Windows </a></li>
+                        <li><a href="#">Download for macOS</a></li>
+                        <li><a href="#">Download for Android</a></li>
+                        <li><a href="#">Download for iOS</a></li>
+                    </ul>
+                </li>
+            
+                <!-- Blog sin submenú -->
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+            </ul>
+            
+            <div class="nav-buttons">
+                <a href="../login.html"  target="_top" class="btn btn-light btn-underline">Sign In</a>
+
+                <a href="../archivosphp/registro.php" target="_top" class="btn btn-dark btn-underline">Join Today</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <span class="highlight-text">
+            The power of communication 
+            <img src="../icons/rocket.gif" alt="Rocket Icon" class="icon-rocket">
+        </span>
+        <h2>Discover a new way<br>to stay in touch</h2>
+        <p>A unified hub for all your messages, ensuring you never miss a beat when it comes to your communication.</p>
+        <div class="buttons">
+            
+            <a href="../learnmore.html" target="_top" class="btn btn-alt btn-scale">Learn more</a>
+            <a href="../archivosphp/get_started.php" target="_top" class="btn btn-primary btn-scale">Get Started</a>
+
+        </div>
+        <figure>
+            <img src="../assets/hero-img.png" alt="App Preview">
+        </figure>
+    </div>
+</section>
+
+
+
+<script src="../js/header-hero.js" defer></script>
+
+</body>
+</html>
