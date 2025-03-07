@@ -508,6 +508,8 @@ a:focus, button:focus, input:focus, textarea:focus {
     margin-bottom: 55px;
     font-family: "poppins", sans-serif;
     color: #5f6c7a;
+    font-size: 18px;
+    line-height: 1.4; /* Agregamos mayor separacion*/
 
 
 }
