@@ -185,7 +185,7 @@ body {
 
 .feature-content h3 {
     
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 400;
     color: #122859;
     margin: 10px 0;
@@ -451,6 +451,13 @@ body {
     height: 500px;
     margin-bottom: -20px; 
     
+}
+
+.story-content h2{
+  font-size: 26px;
+}
+.story-content p{
+  font-size: 16px;
 }
 
 
