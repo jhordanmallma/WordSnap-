@@ -11,10 +11,8 @@ body {
 }
 
 
-
-
 .features-section {
-    background:  #e0f2ff; ; /* Fondo celeste */
+    background:  #e0f2ff;  /* Fondo celeste */
     padding: 50px;
     text-align: center;
     display: flex;
@@ -30,7 +28,7 @@ body {
 
 .features-section h1 {
     font-family: 'Merriweather', serif;
-    font-size: 2.5rem;
+    font-size: 47px;
     color: #122859;
     margin-bottom: 25px;
     font-weight: 300;
@@ -64,9 +62,6 @@ body {
         "video-call chat" /* Ahora el video va a la izquierda y el chat a la derecha */
         "stories stories"; /* La historia ocupa toda la segunda fila */
 }
-
-
-
 
 .feature-card:nth-child(3) {
     grid-column: span 2;
@@ -667,7 +662,7 @@ html, body {
   }
   
   .features-section h1 {
-    font-size: 1.8rem;
+    font-size: 70px;
     margin-bottom: 15px;
   }
   
