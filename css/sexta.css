@@ -28,7 +28,7 @@ body {
     font-size: 43px;
     font-weight: 550; 
     color:#122859;;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: 'Merriweather', serif;
     margin-left: 27px; /* Mueve el h1 20px a la derecha */
     
@@ -36,8 +36,9 @@ body {
 .texto p {
     font-size: 16px;
     color: #5A7184;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     margin-left: 27px; 
+    line-height: 1.4; /* Agregamos mayor separacion*/
 }
 .botones {
     display: flex;
