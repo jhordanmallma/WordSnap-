@@ -163,9 +163,9 @@ body {
     background-color: white;  /* Fondo blanco */
     color:  #59698B ;           /* Texto azul */
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border: 2px solid  #59698B ; /* Borde azul */
-    border-radius: 15px;
+    border-radius: 23px;
     font-size: 12px;
     text-transform: uppercase;
     margin-left: 8px; 
