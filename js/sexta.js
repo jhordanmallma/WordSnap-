@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       text: 'The grind never stops, keep pushing!',
       time: '10:20 AM',
       avatar: '../icons/hombre.png',
-      left: 800,
+      left: 745,
       top: 129
     },
     {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       text: 'Speed and precision in every move!',
       time: '10:25 AM',
       avatar: '../icons/nino.png',
-      left: 1150,
+      left: 1095,
       top: 129
     },
     // Renglón 3 (top: 240px)
