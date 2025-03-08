@@ -9,7 +9,12 @@
 body {
     background-color: #ffffff; /* Fondo general blanco */
 }
-
+.icon {
+  width: 22px; /* Tamaño pequeño */
+  height: 22px;
+  position: relative;
+  top: 4px; /* Ajusta el valor para mover el icono hacia abajo */
+}
 
 .features-section {
     background:  #e0f2ff;  /* Fondo celeste */
