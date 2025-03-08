@@ -124,6 +124,7 @@ body {
     border: 1px solid #ddd; /* Solo para ver el contenedor */
     border-radius: 12px;
     position: relative;
+    
   }
 .mensajes-scroll {
     display: flex;
@@ -224,14 +225,11 @@ body {
     margin-left: 5px;
   }
 
-  .mensajes-container {
-    transform: translateX(40px) translateY(7px);
-}
+ /* .mensajes-container {
+    transform: translateX(40px) translateY(7px) !important;
+}*/
 
   
-
-
-
 
 /* MEDIA QUERIES PARA RESPONSIVIDAD */
 
@@ -308,4 +306,7 @@ body {
 .show {
   opacity: 1;
   transform: translateY(0);
+}
+.mensajes-container.show {
+  transform: translateX(40px) translateY(0);
 }
