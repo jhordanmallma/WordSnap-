@@ -82,12 +82,14 @@ body {
     color: #122859;
     text-align: left;
     margin-top: 13px; /* Espacio superior */
-    padding: 11px; 
+    padding: 11px;
+    font-size:26px; 
 
 }
 .feature-card p{
     text-align: left;
     padding:10px; 
+    font-size:16px;
 }
 .feature-card.video-call h2 {
     color: #333; 
