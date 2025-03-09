@@ -114,7 +114,7 @@ body {
 
 .mensajes-container {
     width: 100%;
-    overflow-x: auto;  /* Scroll horizontal */
+    overflow-x: hidden;  /* Scroll horizontal */
     margin: 0 auto;
     /* Opcional: estilo de scroll suave */
     scroll-behavior: smooth; 
@@ -126,6 +126,53 @@ body {
     position: relative;
     
   }
+  
+
+  /* Estilo para las flechas de scroll */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.3s ease;
+  display: none;  /* Se mostrarán solo mediante JS */
+  z-index: 10;
+}
+
+.scroll-content {
+  /* Tu ancho y alto definido */
+  width: 700px; /* o el que estés usando */
+  height: 100%;
+  overflow-x: auto; /* Permite el scroll horizontal */
+  
+  /* Oculta la scrollbar en Firefox */
+  scrollbar-width: none; 
+}
+
+/* Oculta la scrollbar en navegadores basados en WebKit (Chrome, Safari, Opera) */
+.scroll-content::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Posición extrema */
+.scroll-arrow.right {
+  right: 0;  /* Extremo derecho */
+}
+
+.scroll-arrow.left {
+  left: 0;   /* Extremo izquierdo */
+}
+
+/* Hacer que al hacer hover sobre el contenedor se muestren las flechas (si hay contenido para desplazar) */
+.mensajes-container:hover .scroll-arrow {
+  display: block;
+}
 .mensajes-scroll {
     display: flex;
     gap: 15px;
