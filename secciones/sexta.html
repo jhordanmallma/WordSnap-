@@ -18,9 +18,14 @@
             </div>
         </div>
         <div class="mensajes-container">
-            <div class="mensajes-wrapper">
-                <!-- Los mensajes se generan dinámicamente desde JavaScript -->
+            <!-- Contenedor externo, que engloba todo -->
+            <div class="scroll-content">
+              <div class="mensajes-wrapper">
+                <!-- Mensajes generados dinámicamente -->
+              </div>
             </div>
+            <div class="scroll-arrow left" id="scrollLeft">&#9664;</div>
+            <div class="scroll-arrow right" id="scrollRight">&#9654;</div>
         </div>
     </section>
     <script src="../js/sexta.js"></script>

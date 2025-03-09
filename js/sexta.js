@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const wrapper = document.querySelector('.mensajes-wrapper');
+  // Seleccionamos el contenedor externo, el área de scroll y el wrapper de mensajes
+  const containerOuter = document.querySelector('.mensajes-container');
+  const scrollContent = document.querySelector('.scroll-content');
+  const mensajesWrapper = document.querySelector('.mensajes-wrapper');
 
-  // Se aumenta el ancho para que quepan las nuevas columnas horizontales
-  wrapper.style.position = 'relative';
-  wrapper.style.width = '1500px';
-  // La altura se mantiene ya que los mensajes siguen en 3 renglones
-  wrapper.style.height = '320px';
+  // Configuramos el wrapper de mensajes
+  mensajesWrapper.style.position = 'relative';
+  mensajesWrapper.style.width = '1558px';
+  mensajesWrapper.style.height = '320px';
 
+  // Datos de los mensajes (originales y nuevos)
   const mensajesData = [
-    // Mensajes originales
     {
       name: 'Harry Maguire',
       text: 'You need to improve now',
@@ -57,8 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       left: 450,
       top: 240
     },
-    // Nuevos mensajes agregados horizontalmente:
-    // Renglón 1 (top: 18px)
+    // Nuevos mensajes horizontales:
     {
       name: 'Kevin De Bruyne',
       text: 'Let’s create a masterpiece on the field!',
@@ -75,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
       left: 1150,
       top: 18
     },
-    // Renglón 2 (top: 129px)
     {
       name: 'Cristiano Ronaldo',
       text: 'The grind never stops, keep pushing!',
@@ -92,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
       left: 1095,
       top: 129
     },
-    // Renglón 3 (top: 240px)
     {
       name: 'Neymar Jr.',
       text: 'Creativity is my middle name.',
@@ -111,23 +110,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
+  // Generamos cada tarjeta de mensaje y la agregamos al wrapper
   mensajesData.forEach(msg => {
     const card = document.createElement('div');
     card.classList.add('mensaje-card');
-
-    // Posicionamiento y tamaño de la tarjeta
     card.style.position = 'absolute';
     card.style.left = `${msg.left}px`;
     card.style.top = `${msg.top}px`;
     card.style.width = '300px';
-    card.style.height = '88px';  
-    card.style.padding = '0 12px'; 
-
-    // Centrado vertical del contenido
+    card.style.height = '88px';
+    card.style.padding = '0 12px';
     card.style.display = 'flex';
-    card.style.alignItems = 'center'; 
+    card.style.alignItems = 'center';
 
-    // Estructura interna del mensaje
     card.innerHTML = `
       <div style="display: flex; align-items: center;">
         <img 
@@ -136,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
           style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;"
         >
         <div>
-          <!-- Fila con el nombre y la hora -->
           <div style="display: flex; align-items: baseline;">
             <strong style="font-size: 14px; margin: 0; margin-bottom: 7px;">
               ${msg.name}
@@ -145,75 +139,101 @@ document.addEventListener('DOMContentLoaded', () => {
               ${msg.time}
             </span>
           </div>
-          <!-- Mensaje debajo de la fila anterior -->
           <p style="font-size: 13px; margin: 0; color: #5A7184;">
             ${msg.text}
           </p>
         </div>
       </div>
     `;
-
-    wrapper.appendChild(card);
+    mensajesWrapper.appendChild(card);
   });
 
-  // (Opcional) Desplazamiento horizontal con drag
-  const container = document.querySelector('.mensajes-container');
+  // Seleccionamos las flechas (que están fijas en el contenedor externo)
+  const scrollRightBtn = document.getElementById('scrollRight');
+  const scrollLeftBtn = document.getElementById('scrollLeft');
+  const scrollStep = 300; // Píxeles a desplazar por clic
+
+  // Eventos de clic para las flechas; el scroll se aplica al área de scroll (scrollContent)
+  scrollRightBtn.addEventListener('click', () => {
+    scrollContent.scrollLeft += scrollStep;
+    updateArrowVisibility();
+  });
+  scrollLeftBtn.addEventListener('click', () => {
+    scrollContent.scrollLeft -= scrollStep;
+    updateArrowVisibility();
+  });
+
+  // Función para actualizar la visibilidad de las flechas según la posición del scroll
+  function updateArrowVisibility() {
+    if (scrollContent.scrollLeft <= 0) {
+      scrollLeftBtn.style.display = 'none';
+    } else {
+      scrollLeftBtn.style.display = 'block';
+    }
+    if (scrollContent.scrollLeft >= scrollContent.scrollWidth - scrollContent.clientWidth - 1) {
+      scrollRightBtn.style.display = 'none';
+    } else {
+      scrollRightBtn.style.display = 'block';
+    }
+  }
+
+  scrollContent.addEventListener('scroll', updateArrowVisibility);
+
+  // Implementamos scroll por arrastre (drag) sobre el área de scroll
   let isDown = false;
   let startX;
-  let scrollLeft;
-
-  container.addEventListener('mousedown', (e) => {
+  let scrollLeftPos;
+  
+  scrollContent.addEventListener('mousedown', (e) => {
     isDown = true;
-    startX = e.pageX - container.offsetLeft;
-    scrollLeft = container.scrollLeft;
+    startX = e.pageX - scrollContent.offsetLeft;
+    scrollLeftPos = scrollContent.scrollLeft;
   });
-
-  container.addEventListener('mouseleave', () => {
+  scrollContent.addEventListener('mouseleave', () => {
     isDown = false;
   });
-
-  container.addEventListener('mouseup', () => {
+  scrollContent.addEventListener('mouseup', () => {
     isDown = false;
   });
-
-  container.addEventListener('mousemove', (e) => {
+  scrollContent.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
-    const x = e.pageX - container.offsetLeft;
+    const x = e.pageX - scrollContent.offsetLeft;
     const walk = (x - startX) * 2;
-    container.scrollLeft = scrollLeft - walk;
+    scrollContent.scrollLeft = scrollLeftPos - walk;
+    updateArrowVisibility();
   });
-});
 
+  // Asignamos los eventos de mouseenter/mouseleave al contenedor externo para que las flechas
+  // permanezcan visibles mientras el cursor esté en cualquier parte (incluyendo las flechas)
+  containerOuter.addEventListener('mouseenter', () => {
+    updateArrowVisibility();
+    scrollRightBtn.style.display = 'block';
+    scrollLeftBtn.style.display = 'block';
+  });
+  containerOuter.addEventListener('mouseleave', () => {
+    scrollRightBtn.style.display = 'none';
+    scrollLeftBtn.style.display = 'none';
+  });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Selecciona todas las secciones que deben tener el fade in
+  // (Opcional) Animación de fade-in para la sección
   const sections = document.querySelectorAll(".mi-seccion");
-  
   sections.forEach(section => {
-      // Selecciona todos los elementos dentro de cada sección
-      const elements = section.querySelectorAll("*");
-      
-      // Agrega la clase base de animación a cada elemento
-      elements.forEach(el => el.classList.add("fade-in-section"));
-      
-      // Función para animar de forma secuencial
-      function fadeInElements() {
-          elements.forEach((el, index) => {
-              setTimeout(() => {
-                  el.classList.add("show");
-              }, index * 50); // Ajusta el retraso según prefieras
-          });
+    const elements = section.querySelectorAll("*");
+    elements.forEach(el => el.classList.add("fade-in-section"));
+    function fadeInElements() {
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add("show");
+        }, index * 50);
+      });
+    }
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        fadeInElements();
+        observer.disconnect();
       }
-      
-      // Usamos IntersectionObserver para disparar la animación cuando la sección esté visible
-      const observer = new IntersectionObserver(entries => {
-          if (entries[0].isIntersecting) {
-              fadeInElements();
-              observer.disconnect();
-          }
-      }, { threshold: 0.2 });
-      
-      observer.observe(section);
+    }, { threshold: 0.2 });
+    observer.observe(section);
   });
 });
