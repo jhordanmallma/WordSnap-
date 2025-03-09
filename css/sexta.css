@@ -6,6 +6,8 @@ body {
     align-items: center;
     height: 100vh;
     background: white;
+   
+
 }
 .comunicacion {
     display: flex;

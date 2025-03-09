@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Seleccionamos las flechas (que están fijas en el contenedor externo)
   const scrollRightBtn = document.getElementById('scrollRight');
   const scrollLeftBtn = document.getElementById('scrollLeft');
-  const scrollStep = 300; // Píxeles a desplazar por clic
+  const scrollStep = 320; // Píxeles a desplazar por clic
 
   // Eventos de clic para las flechas; el scroll se aplica al área de scroll (scrollContent)
   scrollRightBtn.addEventListener('click', () => {
