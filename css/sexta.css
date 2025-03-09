@@ -121,7 +121,7 @@ body {
     /* Si usas el drag con mouse, conserva overflow-x: auto */
     /* height fija si quieres controlar la altura */
     height: 350px; 
-    border: 1px solid #ddd; /* Solo para ver el contenedor */
+    border: none; /* Solo para ver el contenedor */
     border-radius: 12px;
     position: relative;
     
