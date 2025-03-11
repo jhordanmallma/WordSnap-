@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Reviews</title>
-    <link rel="stylesheet" href="../css/testimonios.css">
-    <link rel="stylesheet" href="https://use.typekit.net/duu4zul.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Reviews</title>
+  <link rel="stylesheet" href="../css/testimonios.css">
+  <link rel="stylesheet" href="https://use.typekit.net/duu4zul.css">
 </head>
 <body>
 
-
-    <section class="reviews-section mi-seccion">
-       
-        <div class="reviews-container">
-            <div style="height: 30px;"></div>
-            <div class="review">
-                <p>I can keep in touch with loved ones, no matter where I am, without worrying about an international call ✨.</p>
-                <div class="user-info">
-                    <img src="../icons/mujer.png" alt="Joel Matip Hehanusa">
-                    <div>
-                        <h4>Joel Matip Hehanusa</h4>
-                        <span>Liverpool Player</span>
-                    </div>
-                </div>
-            </div>
-            <div class="review">
-                <p>I can easily communicate with my customers, provide quick support, and even showcase my products.</p>
-                <div class="user-info">
-                    <img src="../icons/nino.png" alt="Wataru Endo Ragazi">
-                    <div>
-                        <h4>Wataru Endo Ragazi</h4>
-                        <span>Software Engineer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="review">
-                <p>I use them for important work meetings and catch-ups with friends. I use them for important work meetings and catch-ups with friends.</p>
-                <div class="user-info">
-                    <img src="../icons/hombre.png" alt="Curtis Jones Antip">
-                    <div>
-                        <h4>Curtis Jones Antip</h4>
-                        <span>Carpenter</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="review">
-                <p>Staying connected has never been easier! Whether it's for work or just a casual chat, this platform makes every conversation seamless and enjoyable.</p>
-                <div class="user-info">
-                    <img src="../icons/hombre2.png" alt="Liam Anderson">
-                    <div>
-                        <h4>Liam Anderson</h4>
-                        <span>Graphic Designer</span>
-                    </div>
-                </div>
-            </div>
+  <section class="reviews-section mi-seccion">
+    <div class="reviews-container">
+      <div style="height: 30px;"></div>
+      <!-- Review 1 -->
+      <div class="review">
+        <p id="review1-text">
+          I can keep in touch with loved ones, no matter where I am, without worrying about an international call ✨.
+        </p>
+        <div class="user-info">
+          <img src="../icons/mujer.png" alt="Joel Matip Hehanusa">
+          <div>
+            <h4>Joel Matip Hehanusa</h4>
+            <span>Liverpool Player</span>
+          </div>
         </div>
-        <div class="text-section">
-            <h2>There are several of our users who are happy with WordSnap</h2>
-            <p>A unified hub for all your messages, ensuring you never<br>miss a beat when it comes to your communication.</p>
-            <a href="#" class="explore-link">Explore Features</a>
-
+      </div>
+      <!-- Review 2 -->
+      <div class="review">
+        <p id="review2-text">
+          I can easily communicate with my customers, provide quick support, and even showcase my products.
+        </p>
+        <div class="user-info">
+          <img src="../icons/nino.png" alt="Wataru Endo Ragazi">
+          <div>
+            <h4>Wataru Endo Ragazi</h4>
+            <span>Software Engineer</span>
+          </div>
         </div>
-    </section>
-    <script src="../js/testimonios.js" defer></script>
+      </div>
+      <!-- Review 3 -->
+      <div class="review">
+        <p id="review3-text">
+          I use them for important work meetings and catch-ups with friends. I use them for important work meetings and catch-ups with friends.
+        </p>
+        <div class="user-info">
+          <img src="../icons/hombre.png" alt="Curtis Jones Antip">
+          <div>
+            <h4>Curtis Jones Antip</h4>
+            <span>Carpenter</span>
+          </div>
+        </div>
+      </div>
+      <!-- Review 4 -->
+      <div class="review">
+        <p id="review4-text">
+          Staying connected has never been easier! Whether it's for work or just a casual chat, this platform makes every conversation seamless and enjoyable.
+        </p>
+        <div class="user-info">
+          <img src="../icons/hombre2.png" alt="Liam Anderson">
+          <div>
+            <h4>Liam Anderson</h4>
+            <span>Graphic Designer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sección de texto extra -->
+    <div class="text-section">
+      <h2 id="reviews-heading">
+        There are several of our users who are happy with WordSnap
+      </h2>
+      <p id="reviews-description">
+        A unified hub for all your messages, ensuring you never<br>miss a beat when it comes to your communication.
+      </p>
+      <a href="#" class="explore-link" id="reviews-link">Explore Features</a>
+    </div>
+  </section>
+  
+  <!-- Asegúrate de cargar el script de traducción para testimonios -->
+  <script src="../js/testimonios-lang.js"></script>
+  <script src="../js/testimonios.js" defer></script>
 </body>
 </html>
