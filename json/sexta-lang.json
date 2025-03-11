@@ -1,0 +1,43 @@
+{
+    "en": {
+      "comunicacion_title": "Experience Seamless Communication!",
+      "comunicacion_description": "Uncover hidden trends, elevate engagement,<br> and unleash the power of data-driven decisions.",
+      "btn_learn_more": "Learn more",
+      "btn_get_started": "Get started",
+      "messages": [
+        "You need to improve now",
+        "Still working on that finishing touch!",
+        "Get more focus next week!",
+        "Bos, I need to...",
+        "I need a great partner sir",
+        "I am ready for the challenge!",
+        "Let’s create a masterpiece on the field!",
+        "Magic happens when you least expect it!",
+        "The grind never stops, keep pushing!",
+        "Speed and precision in every move!",
+        "Creativity is my middle name.",
+        "Wisdom on and off the pitch."
+      ]
+    },
+    "es": {
+      "comunicacion_title": "¡Experimenta una comunicación sin fisuras!",
+      "comunicacion_description": "Descubre tendencias ocultas, eleva el compromiso,<br> y desata el poder de las decisiones basadas en datos.",
+      "btn_learn_more": "Más información",
+      "btn_get_started": "Comenzar",
+      "messages": [
+        "Necesitas mejorar ahora",
+        "¡Sigue trabajando en ese toque final!",
+        "¡Concéntrate más la próxima semana!",
+        "Bos, necesito...",
+        "Necesito un gran compañero, señor",
+        "¡Estoy listo para el desafío!",
+        "¡Vamos a crear una obra maestra en el campo!",
+        "¡La magia sucede cuando menos lo esperas!",
+        "El esfuerzo nunca se detiene, ¡sigue adelante!",
+        "¡Velocidad y precisión en cada movimiento!",
+        "La creatividad es mi segundo nombre.",
+        "Sabiduría dentro y fuera del campo."
+      ]
+    }
+  }
+  
