@@ -1,5 +1,8 @@
+// Declarar el array de elementos de mensajes en ámbito global
+let messageTextElements = [];
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Seleccionamos el contenedor externo, el área de scroll y el wrapper de mensajes
+  // Seleccionamos los contenedores
   const containerOuter = document.querySelector('.mensajes-container');
   const scrollContent = document.querySelector('.scroll-content');
   const mensajesWrapper = document.querySelector('.mensajes-wrapper');
@@ -111,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   // Generamos cada tarjeta de mensaje y la agregamos al wrapper
-  mensajesData.forEach(msg => {
+  mensajesData.forEach((msg, index) => {
     const card = document.createElement('div');
     card.classList.add('mensaje-card');
     card.style.position = 'absolute';
@@ -146,14 +149,16 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
     mensajesWrapper.appendChild(card);
+    // Guardamos la referencia al <p> del mensaje para luego actualizar su texto
+    const pElement = card.querySelector('p');
+    messageTextElements.push(pElement);
   });
 
-  // Seleccionamos las flechas (que están fijas en el contenedor externo)
+  // Resto del código para scroll y animaciones (sin cambios)
   const scrollRightBtn = document.getElementById('scrollRight');
   const scrollLeftBtn = document.getElementById('scrollLeft');
-  const scrollStep = 320; // Píxeles a desplazar por clic
+  const scrollStep = 320;
 
-  // Eventos de clic para las flechas; el scroll se aplica al área de scroll (scrollContent)
   scrollRightBtn.addEventListener('click', () => {
     scrollContent.scrollLeft += scrollStep;
     updateArrowVisibility();
@@ -163,7 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateArrowVisibility();
   });
 
-  // Función para actualizar la visibilidad de las flechas según la posición del scroll
   function updateArrowVisibility() {
     if (scrollContent.scrollLeft <= 0) {
       scrollLeftBtn.style.display = 'none';
@@ -179,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   scrollContent.addEventListener('scroll', updateArrowVisibility);
 
-  // Implementamos scroll por arrastre (drag) sobre el área de scroll
   let isDown = false;
   let startX;
   let scrollLeftPos;
@@ -189,12 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
     startX = e.pageX - scrollContent.offsetLeft;
     scrollLeftPos = scrollContent.scrollLeft;
   });
-  scrollContent.addEventListener('mouseleave', () => {
-    isDown = false;
-  });
-  scrollContent.addEventListener('mouseup', () => {
-    isDown = false;
-  });
+  scrollContent.addEventListener('mouseleave', () => { isDown = false; });
+  scrollContent.addEventListener('mouseup', () => { isDown = false; });
   scrollContent.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
@@ -204,8 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateArrowVisibility();
   });
 
-  // Asignamos los eventos de mouseenter/mouseleave al contenedor externo para que las flechas
-  // permanezcan visibles mientras el cursor esté en cualquier parte (incluyendo las flechas)
   containerOuter.addEventListener('mouseenter', () => {
     updateArrowVisibility();
     scrollRightBtn.style.display = 'block';
@@ -216,16 +213,13 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollLeftBtn.style.display = 'none';
   });
 
-  // (Opcional) Animación de fade-in para la sección
   const sections = document.querySelectorAll(".mi-seccion");
   sections.forEach(section => {
     const elements = section.querySelectorAll("*");
     elements.forEach(el => el.classList.add("fade-in-section"));
     function fadeInElements() {
       elements.forEach((el, index) => {
-        setTimeout(() => {
-          el.classList.add("show");
-        }, index * 50);
+        setTimeout(() => { el.classList.add("show"); }, index * 50);
       });
     }
     const observer = new IntersectionObserver(entries => {
@@ -236,4 +230,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
     observer.observe(section);
   });
+});
+
+// Listener para recibir el idioma desde la página principal y actualizar los mensajes y textos estáticos
+window.addEventListener('message', (event) => {
+  if (event.data && event.data.language) {
+    const lang = event.data.language;
+    // Cargamos las traducciones para la sección
+    fetch('../json/sexta-lang.json')
+      .then(response => response.json())
+      .then(data => {
+        if (data[lang]) {
+          // Actualizamos los mensajes dinámicos (ya implementado)
+          if (data[lang].messages) {
+            const messagesTranslations = data[lang].messages;
+            messageTextElements.forEach((pElement, index) => {
+              if (messagesTranslations[index]) {
+                pElement.textContent = messagesTranslations[index];
+              }
+            });
+          }
+          // Actualizamos los textos estáticos:
+          document.getElementById('comunicacion-title').innerHTML = data[lang].comunicacion_title;
+          document.getElementById('comunicacion-description').innerHTML = data[lang].comunicacion_description;
+          document.getElementById('btn-learnmore').textContent = data[lang].btn_learn_more;
+          document.getElementById('btn-getstarted').textContent = data[lang].btn_get_started;
+        }
+      })
+      .catch(error => console.error("Error loading sexta translations:", error));
+  }
 });

@@ -712,3 +712,54 @@ p {
 .line-container:hover .line {
     width: 50px;
 }
+
+
+
+ /* Botón flotante */
+#translatorButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* Panel del traductor, posicionado fijo justo encima del botón */
+  #translatorPanel {
+    position: fixed;
+    bottom: 90px; /* Ajusta para que quede arriba del botón */
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 300px; /* Puedes ajustar el ancho */
+    padding: 15px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  /* Oculta el panel por defecto */
+  .hidden {
+    display: none;
+  }
+  
+  /* Botón de cerrar dentro del panel */
+  #closePanel {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
