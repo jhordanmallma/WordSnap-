@@ -1,0 +1,41 @@
+{
+    "en": {
+      "nav_features": "Features",
+      "nav_download": "Download",
+      "nav_blog": "Blog",
+      "submenu_communication": "Communication",
+      "submenu_collaboration": "Collaboration",
+      "submenu_security": "Security",
+      "submenu_download_windows": "Download for Windows",
+      "submenu_download_macos": "Download for macOS",
+      "submenu_download_android": "Download for Android",
+      "submenu_download_ios": "Download for iOS",
+      "btn_sign_in": "Sign In",
+      "btn_join_today": "Join Today",
+      "hero_highlight_text": "The power of communication",
+      "hero_title": "Discover a new way<br>to stay in touch",
+      "hero_description": "A unified hub for all your messages, ensuring you never miss a beat when it comes to your communication.",
+      "btn_learn_more": "Learn more",
+      "btn_get_started": "Get Started"
+    },
+    "es": {
+      "nav_features": "Características",
+      "nav_download": "Descargar",
+      "nav_blog": "Blog",
+      "submenu_communication": "Comunicación",
+      "submenu_collaboration": "Colaboración",
+      "submenu_security": "Seguridad",
+      "submenu_download_windows": "Descargar para Windows",
+      "submenu_download_macos": "Descargar para macOS",
+      "submenu_download_android": "Descargar para Android",
+      "submenu_download_ios": "Descargar para iOS",
+      "btn_sign_in": "Iniciar Sesión",
+      "btn_join_today": "Únete Hoy",
+      "hero_highlight_text": "El poder de la comunicación",
+      "hero_title": "Descubre una nueva forma<br>de mantenerte en contacto",
+      "hero_description": "Un centro unificado para todos tus mensajes, asegurándote de no perder detalle en tu comunicación.",
+      "btn_learn_more": "Más información",
+      "btn_get_started": "Comenzar"
+    }
+  }
+  

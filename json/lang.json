@@ -1,0 +1,111 @@
+{
+    "en": {
+      "community_title": "The Preferred Messaging Dashboard<br> for a Thriving Community",
+      "community_description": "At WordSnap, we're dedicated to revolutionizing the way<br> you manage and optimize your communication",
+      "awards_text": "Awards Winning",
+      "active_users_text": "Active Users",
+      "satisfied_users_text": "Satisfied Users",
+      "features_title": "Providing a comprehensive suite<br>of services tailored to your needs",
+      "features_description": "At WordSnap, our commitment lies in transforming the landscape of how you handle and enhance your communication",
+      "feature1_title": "Security and Privacy 🔒",
+      "feature1_description": "Our platform employs robust encryption and security measures to ensure your messages are safe.",
+      "feature2_title": "Multi-Device Accessibility ⚙️",
+      "feature2_description": "WordSnap is accessible across multiple devices, giving you the flexibility to chat on your preferred platform.",
+      "feature3_title": "A simple messaging system ✨",
+      "feature3_description": "Uncover hidden trends, elevate engagement, and unleash the power of data-driven decisions.",
+      "footer_tagline": "Connecting Conversations, Uniting Worlds",
+      "subscribe_btn": "Subscribe Newsletter",
+      "footer_product": "Product",
+      "footer_company": "Company",
+      "footer_support": "Support",
+      "footer_social": "Social media",
+      "footer_download": "Download",
+      "footer_product_links": {
+        "link1": "Features",
+        "link2": "Security",
+        "link3": "Privacy"
+      },
+      "footer_company_links": {
+        "link1": "About Us",
+        "link2": "Careers",
+        "link3": "Brand Center",
+        "link4": "Blog"
+      },
+      "footer_support_links": {
+        "link1": "Help Center",
+        "link2": "Contact Us",
+        "link3": "FAQ",
+        "link4": "Feedback"
+      },
+      "footer_social_links": {
+        "link1": "Instagram",
+        "link2": "Facebook",
+        "link3": "Twitter",
+        "link4": "Youtube"
+      },
+      "footer_download_links": {
+        "link1": "Android",
+        "link2": "iOS",
+        "link3": "Windows",
+        "link4": "Mac",
+        "link5": "Linux"
+      },
+      "footer_bottom": "WordSnap 2023. All Rights Reserved",
+      "lang_btn_text": "Español"
+    },
+    "es": {
+      "community_title": "El panel de mensajería preferido para una comunidad próspera",
+      "community_description": "En WordSnap, nos dedicamos a revolucionar la forma en que gestionas y optimizas tu comunicación",
+      "awards_text": "Premios Ganados",
+      "active_users_text": "Usuarios Activos",
+      "satisfied_users_text": "Usuarios Satisfechos",
+      "features_title": "Ofreciendo un conjunto integral de servicios adaptados a tus necesidades",
+      "features_description": "En WordSnap, nuestro compromiso es transformar la manera en que manejas y mejoras tu comunicación",
+      "feature1_title": "Seguridad y Privacidad 🔒",
+      "feature1_description": "Nuestra plataforma emplea encriptación robusta y medidas de seguridad para garantizar que tus mensajes estén seguros.",
+      "feature2_title": "Accesibilidad Multi-dispositivo ⚙️",
+      "feature2_description": "WordSnap es accesible en múltiples dispositivos, ofreciéndote la flexibilidad de chatear en tu plataforma preferida.",
+      "feature3_title": "Un sistema de mensajería sencillo ✨",
+      "feature3_description": "Descubre tendencias ocultas, eleva el compromiso y desata el poder de decisiones basadas en datos.",
+      "footer_tagline": "Conectando conversaciones, uniendo mundos",
+      "subscribe_btn": "Suscríbete al boletín",
+      "footer_product": "Producto",
+      "footer_company": "Compañía",
+      "footer_support": "Soporte",
+      "footer_social": "Redes Sociales",
+      "footer_download": "Descargar",
+      "footer_product_links": {
+        "link1": "Características",
+        "link2": "Seguridad",
+        "link3": "Privacidad"
+      },
+      "footer_company_links": {
+        "link1": "Sobre Nosotros",
+        "link2": "Carreras",
+        "link3": "Centro de Marca",
+        "link4": "Blog"
+      },
+      "footer_support_links": {
+        "link1": "Centro de Ayuda",
+        "link2": "Contáctanos",
+        "link3": "Preguntas Frecuentes",
+        "link4": "Retroalimentación"
+      },
+      "footer_social_links": {
+        "link1": "Instagram",
+        "link2": "Facebook",
+        "link3": "Twitter",
+        "link4": "Youtube"
+      },
+      "footer_download_links": {
+        "link1": "Android",
+        "link2": "iOS",
+        "link3": "Windows",
+        "link4": "Mac",
+        "link5": "Linux"
+      },
+      "footer_bottom": "WordSnap 2023. Todos los derechos reservados",
+      "lang_btn_text": "English"
+    }
+  }
+  
