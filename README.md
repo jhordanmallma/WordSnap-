@@ -5,7 +5,7 @@
 
 WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su propósito es replicar un diseño basado en un mockup, asegurando un diseño responsivo y la funcionalidad de cambio de idioma entre inglés y español.
 
-🔗 Accede a la página aquí: WordSnap en Netlify
+🔗 Accede a la página aquí: https://67d0ee438044e8922234cc1c--spiffy-creponne-f2b6b3.netlify.app
 
 ### 🚀 Características:
 
