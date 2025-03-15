@@ -20,6 +20,8 @@ WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su pro
 
 - 🔧 Implementación con HTML, CSS y JavaScript puro.
 
+
+
 ### 📂 Estructura del Proyecto:
 
 ```Listado de rutas de carpetas
@@ -114,13 +116,36 @@ WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su pro
 ```
         
 
-### 📥 Instalación y Uso: 
+### 📥 Instalación y Uso  
 
-Clona este repositorio en tu máquina local:
+Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local:  
 
-git clone https://github.com/tuusuario/WordSnap.git
+1️⃣ **Clonar el repositorio**  
+   Abre una terminal y ejecuta:  
 
-Abre index.html en cualquier navegador web.
+   ```sh
+   git clone https://github.com/jhordanmallma/WordSnap-.git
+   ```
+2️⃣ Acceder a la carpeta del proyecto
+
+   ```sh
+cd WordSnap-
+   ```
+3️⃣ Abrir el archivo principal en un navegador
+
+- Si usas un navegador, simplemente abre el archivo index.html.
+
+- Si usas VS Code, puedes abrirlo con la extensión Live Server.
+
+- También puedes ejecutar este comando en la terminal de VS Code:
+
+```sh
+code .
+```
+
+✅ ¡Listo! Ahora puedes ver y trabajar en el proyecto. 🚀
+
+***
 
 ### 🛠️ Tecnologías Utilizadas: 
 
