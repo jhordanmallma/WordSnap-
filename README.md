@@ -5,17 +5,20 @@
 
 WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su propósito es replicar un diseño basado en un mockup, asegurando un diseño responsivo y la funcionalidad de cambio de idioma entre inglés y español.
 
-🔗 Accede a la página aquí: https://67d0ee438044e8922234cc1c--spiffy-creponne-f2b6b3.netlify.app
+🔗 **Prueba la página aquí:**  
+👉 [WordSnap en Netlify](https://67d0ee438044e8922234cc1c--spiffy-creponne-f2b6b3.netlify.app) _(Haz clic con el botón derecho y selecciona "Abrir en una nueva pestaña")_
+
+
 
 ### 🚀 Características:
 
-🌐 Cambio de idioma dinámico (Español/Inglés).
+- 🌐 Cambio de idioma dinámico (Español/Inglés).
 
-📱 Diseño responsivo adaptable a dispositivos móviles.
+- 📱 Diseño responsivo adaptable a dispositivos móviles.
 
-🎨 UI basada en un mockup.
+- 🎨 UI basada en un mockup.
 
-🔧 Implementación con HTML, CSS y JavaScript puro.
+- 🔧 Implementación con HTML, CSS y JavaScript puro.
 
 ### 📂 Estructura del Proyecto:
 
@@ -121,15 +124,16 @@ Abre index.html en cualquier navegador web.
 
 ### 🛠️ Tecnologías Utilizadas: 
 
-🏗️ HTML5
+- ![HTML5](https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5&logoColor=white)
+  
+- ![CSS3](https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white)
+  
+- ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white)
+  
+- ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+  
+- ![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)  
 
-🎨 CSS3
-
-⚡ JavaScript puro
-
-📄 JSON
-
-🐘 PHP
 
 ### 🤝 Contribución:
 
@@ -143,4 +147,4 @@ Realiza un pull request.
 
 ### 📧 Contacto:
 
-Si tienes alguna duda o sugerencia, puedes contactarme en [tu email o red social].
+Si tienes alguna duda o sugerencia, puedes contactarme en [jhordanmallma4@gmail.com].
