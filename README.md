@@ -1,10 +1,13 @@
-WordSnap
+# 𝗪𝗼𝗿𝗱𝗦𝗻𝗮𝗽
 
-📌 Descripción:
+### 📌 Descripción
 
-WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su propósito es replicar un diseño basado en un mockup, con un diseño responsivo y la funcionalidad de cambio de idioma entre inglés y español.
 
-🚀 Características:
+WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su propósito es replicar un diseño basado en un mockup, asegurando un diseño responsivo y la funcionalidad de cambio de idioma entre inglés y español.
+
+🔗 Accede a la página aquí: WordSnap en Netlify
+
+### 🚀 Características:
 
 🌐 Cambio de idioma dinámico (Español/Inglés).
 
@@ -14,11 +17,10 @@ WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su pro
 
 🔧 Implementación con HTML, CSS y JavaScript puro.
 
-📂 Estructura del Proyecto:
+### 📂 Estructura del Proyecto:
 
 ```Listado de rutas de carpetas
 
-ª   estructura.txt
 ª   index.html
 ª   learnmore.html
 ª   login.html
@@ -109,7 +111,7 @@ WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su pro
 ```
         
 
-📥 Instalación y Uso: 
+### 📥 Instalación y Uso: 
 
 Clona este repositorio en tu máquina local:
 
@@ -117,18 +119,28 @@ git clone https://github.com/tuusuario/WordSnap.git
 
 Abre index.html en cualquier navegador web.
 
-🛠️ Tecnologías Utilizadas: 
+### 🛠️ Tecnologías Utilizadas: 
 
-HTML5
+🏗️ HTML5
 
-CSS3
+🎨 CSS3
 
-JavaScript puro
+⚡ JavaScript puro
 
-🤝 Contribución: 
+📄 JSON
 
-Si deseas contribuir a este proyecto, ¡eres bienvenido! Puedes hacer un fork y enviar tus mejoras mediante pull requests.
+🐘 PHP
 
-📧 Contacto: 
+### 🤝 Contribución:
 
-Para cualquier consulta o sugerencia, puedes contactarme en [tu email o red social].
+¡Toda contribución es bienvenida! Si deseas mejorar este proyecto:
+
+Haz un fork del repositorio.
+
+Crea una nueva rama con tu mejora.
+
+Realiza un pull request.
+
+### 📧 Contacto:
+
+Si tienes alguna duda o sugerencia, puedes contactarme en [tu email o red social].
