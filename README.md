@@ -1,6 +1,6 @@
 # 𝗪𝗼𝗿𝗱𝗦𝗻𝗮𝗽
 
-### 📌 Descripción
+### 📌 Descripción:
 
 
 WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su propósito es replicar un diseño basado en un mockup, asegurando un diseño responsivo y la funcionalidad de cambio de idioma entre inglés y español.
@@ -116,7 +116,7 @@ WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su pro
 ```
         
 
-### 📥 Instalación y Uso  
+### 📥 Instalación y Uso:  
 
 Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local:  
 
@@ -157,7 +157,17 @@ code .
   
 - ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
   
-- ![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)  
+- ![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
+
+
+### 🚀 Roadmap:  
+
+- [ ] Agregar más traducciones.
+      
+- [ ] Implementar un sistema de usuarios.
+      
+- [ ] Mejorar la optimización móvil.  
+
 
 
 ### 🤝 Contribución:
