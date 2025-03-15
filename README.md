@@ -20,6 +20,24 @@ WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su pro
 
 - 🔧 Implementación con HTML, CSS y JavaScript puro.
 
+## 📸 Capturas de Pantalla  
+
+### 🏠 Página Principal  
+Vista general de la interfaz principal del sitio web.  
+
+![image](https://github.com/user-attachments/assets/84c97855-97f1-4ddd-9514-70cc3fcf0cf9)  
+
+### 🌐 Cambio de Idioma  
+Ejemplo de cómo se ve el cambio de idioma en acción.  
+
+![image](https://github.com/user-attachments/assets/5b69749d-9a8b-42fa-adef-ec1618c9308b)
+
+
+### 📱 Diseño Responsivo  
+El sitio web adaptándose a un dispositivo móvil.  
+
+![image](https://github.com/user-attachments/assets/9d621653-76bf-4e87-9cbb-066d947d9c3f)
+  
 
 
 ### 📂 Estructura del Proyecto:
@@ -160,13 +178,18 @@ code .
 - ![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
 
 
-### 🚀 Roadmap:  
+## 🚀 Roadmap  
 
-- [ ] Agregar más traducciones.
+
+-  Agregar más traducciones (Francés, Alemán, etc.).
       
-- [ ] Implementar un sistema de usuarios.
+-  Mejorar la accesibilidad y usabilidad del sitio.
       
-- [ ] Mejorar la optimización móvil.  
+-  Implementar autenticación de usuarios.
+       
+-  Optimizar el rendimiento y carga de imágenes.
+      
+-  Incluir una sección de preguntas frecuentes (FAQ). 
 
 
 
