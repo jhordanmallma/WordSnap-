@@ -17,8 +17,7 @@ WordSnap es una página web desarrollada con HTML, CSS y JavaScript puro. Su pro
 📂 Estructura del Proyecto:
 
 ```Listado de rutas de carpetas
-El n·mero de serie del volumen es A344-B170
-C:.
+
 ª   estructura.txt
 ª   index.html
 ª   learnmore.html
