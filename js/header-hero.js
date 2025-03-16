@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
  
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const section = document.getElementById("mi-seccion");
 
     if (!section) {
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         elements.forEach((el, index) => {
             setTimeout(() => {
                 el.classList.add("show");
-            }, index * 100);
+            }, index * 50); // Reducido de 100ms a 50ms
         });
     }
 
@@ -107,5 +107,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(section);
 });
-
-
