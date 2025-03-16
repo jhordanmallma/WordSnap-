@@ -102,8 +102,6 @@ body {
 
 /* --- Menú de navegación: reinicio y estilos desde cero --- */
 
-/* --- Menú de navegación: reinicio y estilos desde cero --- */
-
 /* Contenedor del menú */
 .menu {
     list-style: none;
@@ -158,6 +156,19 @@ body {
   .submenu-toggle.active::after {
     transform: translateY(-50%) rotate(180deg);
   }
+  /* Efecto de elevación al pasar el cursor */
+#nav-features,
+#nav-download,
+#nav-blog {
+    display: inline-block; /* Asegura que el efecto se aplique correctamente */
+    transition: transform 0.3s ease-in-out;
+}
+
+#nav-features:hover,
+#nav-download:hover,
+#nav-blog:hover {
+    transform: translateY(-5px); /* Elevación al hacer hover */
+}
   
   /* --- Menú desplegable --- */
   
