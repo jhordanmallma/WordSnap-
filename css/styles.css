@@ -582,7 +582,7 @@ p {
 }
 
 
-.stats {
+/*.stats {
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -598,9 +598,30 @@ p {
     font-size: 14px;
     color: #666;
 }
+*/
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+.stats h3 {
+    font-size: 22px;
+    color: #000;
+    opacity: 0; /* Inicia invisible */
+    transition: opacity 0.8s ease-in-out;
+}
+.stats p {
+    font-size: 14px;
+    color: #666;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
 
-
-
+.stats.show h3,
+.stats.show p {
+    opacity: 1; /* Hace que aparezcan suavemente */
+}
 
 
 
