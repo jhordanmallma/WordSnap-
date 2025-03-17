@@ -298,6 +298,8 @@ body {
     align-items: center;
     margin-bottom: 5px; /* Espacio debajo del encabezado */
     position: relative;
+    z-index: 1; /* Asegura que el menú pueda sobresalir */
+  
   }
 
   /* Botón  */
@@ -387,7 +389,9 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 10;                /* Para que quede sobre otros elementos */
+    z-index: 9999; /* Súbelo aún más */
+
+
   }
   
   .chat-options-menu ul {
