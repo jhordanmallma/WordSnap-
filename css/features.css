@@ -239,15 +239,15 @@ body {
 
 .chat-gradient {
     background: linear-gradient(to bottom, #cfe8fb, #e0f2ff);
-    padding: 20px;
+    padding: 22px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     margin-top: 20px;
     
-    margin-bottom: -20px; 
-    height: 450px;
+    margin-bottom: -35px; 
+    height: 455px;
 }
 
 
@@ -516,7 +516,7 @@ body {
 /* Separador opcional */
 .story-divider {
     border: none;            /* Quitamos el borde por defecto */
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ffffff;
     margin-bottom: 20px;
 }
 
@@ -532,7 +532,7 @@ body {
     scroll-snap-align: start;        /* Cada historia se "ajusta" al inicio del contenedor */
     flex: 0 0 100%;                  /* Ancho completo del contenedor */
     box-sizing: border-box; 
-    height: 368px;                    /* Altura de cada tarjeta */
+    height: 362px;                    /* Altura de cada tarjeta */
 }
 
 
@@ -542,7 +542,7 @@ body {
     border-radius: 10px 10px 0 0; /* Solo redondeado en la parte superior */
     display: block;
     object-fit: cover;
-    height: 355px;  
+    height: 350px;  
 }
 
 
